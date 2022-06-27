@@ -1,10 +1,36 @@
 import { PropTypes } from "prop-types"
-import styles from './Statistics.module.css'
+import {
+    Title,
+    Section,
+    StatList,
+    StatsListItem,
+    StatsLabel,
+    StatsPercentage,
+} from "./Statistics.styled"
 
 export const Statistics = ({ title, stats }) => {
     return (
-        <section className={styles.statistics}>
-            <h2 className={styles.title}>{ title}</h2>
-        </section>
+        <Section>
+            {title && <Title>{title}</Title>}
+            <StatList >
+                {stats.map(({ id, label, percentage }) => (
+                    <StatsListItem key={id} id={id}>
+                        <StatsLabel>{label}</StatsLabel>
+                        <StatsPercentage>{percentage}</StatsPercentage>
+                    </StatsListItem>
+                ))}
+            </StatList>
+        </Section>
     )
 }
+
+Statistics.propTypes = {
+    title: PropTypes.string,
+    stats: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            percentage: PropTypes.number.isRequired,
+        }).isRequired
+    ).isRequired,
+};
