@@ -27,10 +27,10 @@ export const StatsListItem = styled.li`
   width: 100%;
   padding: ${p => `${p.theme.space[3]}px`};
   background-color: ${p => p.backgroundColor};
-  :first-child {
+  &:first-child {
     border-bottom-left-radius: ${p => p.theme.radii.normal};
   }
-  :last-child {
+  &:last-child {
     border-bottom-right-radius: ${p => p.theme.radii.normal};
   }
 `

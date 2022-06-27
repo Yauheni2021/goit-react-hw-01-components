@@ -7,6 +7,7 @@ import {
     StatsLabel,
     StatsPercentage,
 } from "./Statistics.styled"
+import { setColor } from '../Aplications/RandonColor'
 
 export const Statistics = ({ title, stats }) => {
     return (
@@ -14,7 +15,7 @@ export const Statistics = ({ title, stats }) => {
             {title && <Title>{title}</Title>}
             <StatList >
                 {stats.map(({ id, label, percentage }) => (
-                    <StatsListItem key={id} id={id}>
+                    <StatsListItem key={id} id={id} backgroundColor={setColor()}>
                         <StatsLabel>{label}</StatsLabel>
                         <StatsPercentage>{percentage}</StatsPercentage>
                     </StatsListItem>
