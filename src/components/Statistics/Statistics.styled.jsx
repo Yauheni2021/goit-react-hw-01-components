@@ -6,6 +6,8 @@ padding:15px
 `
 
 export const Title = styled.h2`
+  display: flex;
+  justify-content: center;
   padding: ${p => `${p.theme.space[4]}px`} 0;
   text-aligin: center;
   font-sizes: ${p => p.theme.fontSizes.l};
@@ -27,7 +29,7 @@ export const StatsListItem = styled.li`
   width: 100%;
   padding: ${p => `${p.theme.space[3]}px`};
   background-color: ${p => p.backgroundColor};
-  &:first-child {
+  &:first-of-type {
     border-bottom-left-radius: ${p => p.theme.radii.normal};
   }
   &:last-child {

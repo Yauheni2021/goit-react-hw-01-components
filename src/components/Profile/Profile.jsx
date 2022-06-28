@@ -1,34 +1,56 @@
 import {PropTypes}  from "prop-types"
-import styles from './Profile.module.css'
+import {
+    Description,
+    Avatar,
+    Name,
+    AdditionalInfo, 
+    Location,
+    Stats,
+    StatsItem,
+    StatsLabel,
+    StatsQuantity,
+} from "./Profile.styled";
+import { Box } from "../Box";
 
-export const Profile = ({ username, tag, location, avatar, stats }) =>{;
+
+export const Profile = ({
+    username,
+    tag,
+    location,
+    avatar,
+    stats: { followers, views, likes },
+}) => {
     return (
-        <div className={styles.profile}>
-            <div className={styles.description}>
-                <img
-                    src={avatar}
-                    alt="User avatar"
-                    className={styles.avatar}
-                />
-                <p className={styles.name}>{username}</p>
-                <p className={styles.tag}>@{tag}</p>
-                <p className={styles.location}>{location}</p>
-            </div>
-            <ul className={styles.stats}>
-                <li>
-                    <span className={styles.label}>Followers</span>
-                    <span className={styles.quantity}>{styles.Followers}</span>
-                </li>
-                <li>
-                    <span className={styles.label}>Views</span>
-                    <span className={styles.quantity}>{styles.views}</span>
-                </li>
-                <li>
-                    <span className={styles.label}>Likes</span>
-                    <span className={styles.quantity}>{styles.likes}</span>
-                </li>
-            </ul>
-        </div>
+        <Box  mt={3}
+      mx="auto"
+      maxWidth={2}
+      bg="secondary"
+      borderRadius="large">
+            <Description key={tag}>
+                <Avatar src={avatar} alt= "User avatar"/>
+                <Name>{username}</Name>
+                <AdditionalInfo>@{tag}</AdditionalInfo>
+                <Location>{location}</Location>
+            </Description>
+            <Stats>
+                <StatsItem>
+                    <StatsLabel>Followers</StatsLabel>
+                    <StatsLabel>{followers}</StatsLabel>
+                </StatsItem>
+                <StatsItem>
+                    <StatsLabel>Views</StatsLabel>
+                    <StatsLabel>{views}</StatsLabel>
+                </StatsItem>
+                <StatsItem>
+                    <StatsLabel>Likes</StatsLabel>
+                    <StatsLabel>{likes}</StatsLabel>
+                </StatsItem>
+                <StatsItem>
+                    <StatsLabel>Likes</StatsLabel>
+                    <StatsQuantity>{likes}</StatsQuantity>
+                </StatsItem>
+            </Stats>
+        </Box>
     )
 
 
