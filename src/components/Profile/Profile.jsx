@@ -34,15 +34,15 @@ export const Profile = ({
             <Stats>
                 <StatsItem>
                     <StatsLabel>Followers</StatsLabel>
-                    <StatsLabel>{followers}</StatsLabel>
+                    <StatsQuantity>{followers}</StatsQuantity>
                 </StatsItem>
                 <StatsItem>
                     <StatsLabel>Views</StatsLabel>
-                    <StatsLabel>{views}</StatsLabel>
+                    <StatsQuantity>{views}</StatsQuantity>
                 </StatsItem>
                 <StatsItem>
                     <StatsLabel>Likes</StatsLabel>
-                    <StatsLabel>{likes}</StatsLabel>
+                    <StatsQuantity>{likes}</StatsQuantity>
                 </StatsItem>
             </Stats>
         </Box>

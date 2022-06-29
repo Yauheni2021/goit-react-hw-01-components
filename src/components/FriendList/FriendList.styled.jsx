@@ -5,7 +5,7 @@ export const FriendsItem = styled.li`
   align-items: center;
   padding: ${p => `${p.theme.space[3]}px`};
   margin: ${p => `${p.theme.space[3]}px`};
-  :first-child {
+  :first-of-type {
     margin-top: 0;
   }
   :last-child {

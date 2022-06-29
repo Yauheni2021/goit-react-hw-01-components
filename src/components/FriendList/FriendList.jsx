@@ -1,17 +1,18 @@
 import { PropTypes } from "prop-types";
 import { Box } from "components/Box";
+import { FriendListItem } from "./FriendListItem";
 
-export const FriendsList = ({ Friends }) => {
+export const FriendsList = ({ friends }) => {
     return (
         <Box mt={3} mx="auto" py={3} maxWidth={2} as={'ul'}>
-            {Friends.map(({ id, name, isOnline, avatar }) => (
-                <FriendsList
+            {friends.map(({ id, name, isOnline, avatar }) => (
+                <FriendListItem
                     key={id}
                     name={name}
                     isOnline={isOnline}
                     avatar={avatar}
                 >
-                </FriendsList>
+                </FriendListItem>
             ))}
         </Box>
     );
