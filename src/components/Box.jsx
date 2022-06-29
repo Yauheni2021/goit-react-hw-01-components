@@ -11,7 +11,7 @@ import {
     position,
     typography,
     shadow,
-} from "@emotion/";
+} from "styled-system"
 
 export const Box = styled('div')(
   color,

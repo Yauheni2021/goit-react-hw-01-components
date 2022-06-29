@@ -3,8 +3,7 @@ import {
     Description,
     Avatar,
     Name,
-    AdditionalInfo, 
-    Location,
+    AdditionalInfo,
     Stats,
     StatsItem,
     StatsLabel,
@@ -30,7 +29,7 @@ export const Profile = ({
                 <Avatar src={avatar} alt= "User avatar"/>
                 <Name>{username}</Name>
                 <AdditionalInfo>@{tag}</AdditionalInfo>
-                <Location>{location}</Location>
+                <AdditionalInfo>{location}</AdditionalInfo>
             </Description>
             <Stats>
                 <StatsItem>

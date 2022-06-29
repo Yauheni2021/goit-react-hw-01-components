@@ -1,17 +1,17 @@
 import { PropTypes } from "prop-types"
 import {
     Title,
-    Section,
     StatList,
     StatsListItem,
     StatsLabel,
     StatsPercentage,
 } from "./Statistics.styled"
 import { setColor } from '../Aplications/RandonColor'
+import { Box } from "components/Box"
 
 export const Statistics = ({ title, stats }) => {
     return (
-        <Section>
+        <Box mt={3} mx="auto" maxWidth={3} bg="secondary" borderRadius="normal">
             {title && <Title>{title}</Title>}
             <StatList >
                 {stats.map(({ id, label, percentage }) => (
@@ -21,7 +21,7 @@ export const Statistics = ({ title, stats }) => {
                     </StatsListItem>
                 ))}
             </StatList>
-        </Section>
+        </Box>
     )
 }
 
