@@ -29,6 +29,7 @@ export const AdditionalInfo = styled.p`
 
 export const Stats = styled.ul`
   display: flex;
+  padding: ${p => `${p.theme.space[0]}px`};
   width: 100%;
   border-top: 1px solid gray;
   border-radius: ${p => p.theme.radii.large};

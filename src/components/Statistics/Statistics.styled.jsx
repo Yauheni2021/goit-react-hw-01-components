@@ -13,6 +13,7 @@ export const Title = styled.h2`
 export const StatList = styled.ul`
   display: flex;
   width: 100%;
+  padding: ${p => `${p.theme.space[0]}px`};
   border-radius: ${p => p.theme.radii.normal};
   border-top-left-radius: 0;
   border-top-right-radius: 0;

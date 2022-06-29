@@ -44,10 +44,6 @@ export const Profile = ({
                     <StatsLabel>Likes</StatsLabel>
                     <StatsLabel>{likes}</StatsLabel>
                 </StatsItem>
-                <StatsItem>
-                    <StatsLabel>Likes</StatsLabel>
-                    <StatsQuantity>{likes}</StatsQuantity>
-                </StatsItem>
             </Stats>
         </Box>
     )
