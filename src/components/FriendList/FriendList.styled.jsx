@@ -8,7 +8,7 @@ export const FriendsItem = styled.li`
   :first-of-type {
     margin-top: 0;
   }
-  :last-child {
+  :last-of-type {
     margin-bottom: 0;
   }
   border-radius: ${p => p.theme.radii.normal};
