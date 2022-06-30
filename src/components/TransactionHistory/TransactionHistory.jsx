@@ -2,6 +2,7 @@ import { PropTypes } from "prop-types"
 import {
     TableTitle,
     TableRow,
+    TableBody,
     TableDescription,
 } from "./TransactionHistory.styled";
 import { Box } from "components/Box";
@@ -25,7 +26,7 @@ export const TransactionHistory = ({ items }) => {
                 </tr>
             </thead>
 
-            <tbody>
+            <TableBody>
                 {items.map(({ id, type, amount, currency }) => (
                     <TableRow key={id} id={id}>
                         <TableDescription>{type}</TableDescription>
@@ -33,9 +34,9 @@ export const TransactionHistory = ({ items }) => {
                         <TableDescription>{currency}</TableDescription>
                     </TableRow>
                 ))
-                };
+                }
                 
-            </tbody>
+            </TableBody>
         </Box>
     );
 };
